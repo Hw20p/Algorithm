@@ -1,5 +1,4 @@
 # Algorithm
-(https://github.com/BaekjoonHub/BaekjoonHub).
 Programmers, Backjoon
 
 
