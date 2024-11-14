@@ -6,14 +6,7 @@ class Solution {
         int answer = 0;
         
         StringBuilder sb = new StringBuilder(Integer.toString(n, 3)).reverse();
-
-        
-        for (int i = 0; i < sb.length(); i++) {
-            int num = sb.charAt(i) - '0';
-            
-            answer += num * (int) Math.pow(3, sb.length() - i - 1);
-            System.out.println(num);
-        }
+        answer = Integer.parseInt(sb.toString(), 3);
         
         return answer;
     }
