@@ -2,9 +2,9 @@ import java.util.*;
 import java.io.*;
 
 class Solution {
+    static int n, m;
     static int[] dx = {0, 0, -1, 1};
     static int[] dy = {-1, 1, 0, 0};
-    static int n, m;
     
     public void bfs(int x, int y, int[][] maps) {
         Queue<int[]> queue = new LinkedList<>();
@@ -30,16 +30,10 @@ class Solution {
     }
     
     public int solution(int[][] maps) {
-        int answer = 0;
         n = maps.length;
         m = maps[0].length;
         
         bfs(0, 0, maps);
-        
-        
-        answer = maps[n - 1][m - 1];
-        return answer <= 1 ? -1 : answer;
-    }
-    
-    
+        return maps[n - 1][m - 1] > 1 ? maps[n - 1][m - 1] : -1;
+    } 
 }
