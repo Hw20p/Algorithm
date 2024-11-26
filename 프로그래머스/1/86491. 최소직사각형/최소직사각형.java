@@ -2,16 +2,16 @@ import java.util.*;
 
 class Solution {
     public int solution(int[][] sizes) {
-        int maxW = 0, maxH = 0;
+        int w = 0, h = 0, mw = 0, mh = 0;
         
         for (int[] size : sizes) {
-            int w = Math.max(size[0], size[1]);
-            int h = Math.min(size[0], size[1]);
+            mw = Math.max(size[0], size[1]);
+            mh = Math.min(size[0], size[1]);
             
-            maxW = Math.max(maxW, w);
-            maxH = Math.max(maxH, h);
+            w = Math.max(w, mw);
+            h = Math.max(h, mh);
         }
         
-        return maxW * maxH;
+        return w * h;
     }
 }
