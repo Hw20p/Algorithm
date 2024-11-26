@@ -2,25 +2,24 @@ import java.io.*;
 
 class Solution {
     public String solution(String s) {
+        int len = 0;
         StringBuilder sb = new StringBuilder();
         
-        int idx = 0;
-        for (int i = 0; i < s.length(); i++) {
-            char word = s.charAt(i);
+        for (char ch : s.toCharArray()) {
+            if (ch == ' ') {
+                len = 0;
+                sb.append(ch);
+                continue;
+            }
             
-            if (word == ' ') {
-                sb.append(" ");
-                idx = 0;
+            if (len % 2 == 0) {
+                sb.append(Character.toUpperCase(ch));
             } else {
-                if (idx % 2 == 0) {
-                    sb.append(Character.toUpperCase(word));
-                    idx++;
-                } else {
-                    sb.append(Character.toLowerCase(word));
-                    idx++;
-                }
-            } 
+                sb.append(Character.toLowerCase(ch));
+            }
+            len++;
         }
+        
         return sb.toString();
     }
 }
