@@ -30,11 +30,9 @@ class Solution {
                 }
             }
         }
-        
         for (var i : map.entrySet()) {
             if (i.getValue() > 0) answer++;
         }
-        
         return answer;
     }
 }
