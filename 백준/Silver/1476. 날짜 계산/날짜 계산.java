@@ -14,15 +14,10 @@ public class Main {
 		while (true) {
 			if (E == e && S == s && M == m) break;
 			answer++;
-			
-			E++; S++; M++;
-			E %= 16;
-			S %= 29;
-			M %= 20;
-			
-			if (E == 0) E++;
-			if (S == 0) S++;
-			if (M == 0) M++;
+
+			E = E % 15 + 1;
+			S = S % 28 + 1;
+			M = M % 19 + 1;
 		}
 		
 		System.out.println(answer);
