@@ -42,11 +42,13 @@ public class Main {
 		}
 		
 		// 출력
+		StringBuilder sb = new StringBuilder();
 		for (int[] i : arr3) {
 			for (int j : i) {
-				System.out.print(j + " ");
+				sb.append(j + " ");
 			}
-			System.out.println();
+			sb.append("\n");
 		}
+		System.out.println(sb.toString());
 	}
 }
